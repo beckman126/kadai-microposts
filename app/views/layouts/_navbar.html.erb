@@ -5,7 +5,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
   <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-    <a class="navbar-brand" href="<%= likes_user_path(current_user) %>">Favorites</a>
+    <a class="navbar-brand" <% if logged_in? %> href="<%= likes_user_path(current_user) %>" <% else %> href='/'<% end %>>Favorites</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
       <span class="navbar-toggler-icon"></span>
     </button> 
